@@ -1,0 +1,27 @@
+<html>
+    <body>
+   
+     
+
+        {% set c = namespace(value=0) %}
+
+  {%for i in u2%}
+  <p>{{i[1]}}</p>
+    
+         {%for j in timings[c.value]%}
+           <p>{{j[0]}} {{j[1]}}</p>
+        {%endfor%}
+
+        {% set c.value = c.value + 1 %}
+      <p>c values is {{c}}</p>
+      
+ {%endfor%}
+    </body>
+</html>
+
+
+{% set count = namespace(value=0) %}
+{% for i in [1,2,3]%}
+  {{ count.value }}
+  {% set count.value = count.value + 1 %}
+{% endfor %}

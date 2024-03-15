@@ -1,0 +1,151 @@
+<htmL>
+
+    <head>
+        <title>Booking Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <style>
+            body {
+                background-image: url('');
+            }
+    
+            .box {
+                width: 500px;
+                height: 100px;
+                border: solid 5px #000;
+                border-color: #000 transparent transparent transparent;
+                border-radius: 50%/100px 100px 0 0;
+            }
+    
+            
+    /* nav style */
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover {
+      background-color: #111111;
+    }
+    
+        </style>
+    </head>
+    
+    <ul>
+        <li><a href="/toaddmovie">Home</a></li>
+        <li><a href="/index">Logout</a></li>
+    
+          </ul>
+        </nav>
+    
+
+        <form action="/toselectseatf" method="post">
+            <p align="center" style="color:red">{{msg}}</p>
+            <p align="center">
+              <select align='center' name="sid">
+                {%for i in u1%}
+                <option value="{{i[0]}}">ID: {{i[0]}} DATE: {{i[1]}}</option>
+                {%endfor%}
+              </select>
+              <input type="submit" value="Search">
+            </p>
+          </form>
+    
+    <body align="'center">
+    
+    
+    
+    
+        <div align="center">
+            <h1>Theater Booking Page</h1>
+    
+            <form action="/tobookings" method="post">
+                <div class="box"></div>
+    
+    
+                {{seats|safe}}
+              
+    
+          
+    
+                <br><br>
+                <input type="submit" value="Book Now">
+            </form>
+        </div>
+    </body>
+    
+    </htmL>
+    
+    <!-- 
+    <div class="row3">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+    </div>
+    
+    
+    
+    
+    <div class="row4">
+        <input name ='' type="checkbox" value="">
+        <input type="checkbox" name="" value="">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+    </div>
+    
+    <div class="row5">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+    </div>
+    
+    <div class="row">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+    </div> -->
+

@@ -1,0 +1,359 @@
+<html>
+<head>
+    <style>
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: white;
+  
+}
+body{
+	height: auto;
+	width: 100vw;
+	background-color: rgb(0,0,0);
+	overflow-x: hidden;
+}
+.header
+{
+	height: 7em;
+	width: 100vw;
+	position: relative;
+	top: 0;
+	left: 0;
+	background-color: rgb(25,25,25);
+	display: flex;
+	align-items: center;
+	padding: 1em;
+}
+.dashboard
+{
+	text-transform: uppercase;
+	background-image: linear-gradient(45deg,
+		rgb(128,0,0)0%,
+		rgb(0,0,139)20%,
+		rgb(0,255,255)40%,
+		rgb(0,0,139)60%,
+		rgb(255,99,71)100%);
+	color: transparent;
+	
+	font-size: 3em;
+	font-family: 'Major Mono Display', monospace;
+	letter-spacing: 3px;
+}
+.ti-settings
+{
+	font-size: 3em;
+	position: absolute;
+	left: 70%;
+	color: red;
+}
+.ti-settings:hover
+{
+	cursor: pointer;
+	color: rgb(10,0,0);
+	transition: all 0.3s linear;
+}
+.ta
+{
+	text-transform: uppercase;
+	margin-top: 1.5em;
+	color: rgb(176,224,230);
+	font-family: monospace;
+	margin-left: 40%;
+}
+.ta-count
+{
+	font-size: 0.7em;
+	color: rgb(0,180,0);
+}
+.ov
+{
+	text-transform: uppercase;
+	margin-top: 1.5em;
+	color: rgb(176,224,230);
+	font-family: monospace;
+	margin-left: 10px;
+}
+.body{
+	height: 16em;
+	width: 100vw;
+	padding: 1.5em;
+	display: flex;
+	justify-content: space-around;
+	gap: 5%;
+}
+.child
+{
+	height: 100%;
+	width: 50%;
+	background-color: rgb(25,25,25);
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	border-radius: 5%;
+	text-align: center;
+	line-height: 1.5em;
+	font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    position: relative;
+}
+
+.followers
+{
+	color: rgb(176,224,230);
+}
+.twit,.ti-brand-twitter
+{
+	color: rgb(0,0,140);
+}
+.inst,.ti-brand-instagram
+{
+	color: rgb(220,20,60);
+}
+.fb,.ti-brand-facebook
+{
+	color: rgb(0,150,255);
+}
+.yt,.ti-brand-youtube
+{
+	color: rgb(150,0,0);
+}
+.child::before{
+	content: '';
+	height: 1em;
+	width: 100%;
+	background-color: red;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.twitter::before{
+	background-color: rgb(0,0,140);
+}
+.insta::before
+{
+	background-image: linear-gradient(to right, rgb(178,34,34),rgb(220,20,60));
+}
+.facebook::before
+{
+	background-color: rgb(0,150,255);
+}
+.youtube::before
+{
+	background-color: rgb(150,0,0);
+}
+
+.body-two
+{
+	height: 12em;
+	width: 100vw;
+	padding: 1.5em;
+	display: flex;
+	justify-content: space-around;
+	gap: 5%;
+}
+
+.body-three
+{
+	height: 12em;
+	width: 100vw;
+	padding: 1.5em;
+	display: flex;
+	justify-content: space-around;
+	gap: 5%;
+}
+.today
+{
+	height: 100%;
+	width: 50%;
+	background-color: rgb(25,25,25);
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	border-radius: 5%;
+	text-align: center;
+	line-height: 1.5em;
+	font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    position: relative;
+}
+.stats2
+{
+	color: rgb(0,120,0);
+}
+
+.settings-menu
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(0,0,0,0.9);
+	z-index: 1000;
+	text-align: center;
+	line-height: 1.5em;
+	display: none;
+}
+.lightmode,.darkmode
+{
+	margin-bottom: 1.5em;
+	background-color: transparent;
+	padding: 1.5em;
+	border-radius: 10%;
+	font-family: monospace;
+	display: block;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.lightmode,.darkmode:hover
+{
+	cursor: pointer;
+}
+
+.lightmode:active
+{
+	color: rgb(120,0,0);
+}
+.darkmode:active
+{
+	color: rgb(120,0,0);
+}
+
+li
+{
+	list-style-type: none;
+	text-decoration: none;
+	font-family: monospace;
+}
+.menu-link:active
+{
+	color: rgb(120,0,0);
+}
+.return
+{
+	position: absolute;
+	top: 5%;
+	left: 70%;
+	background-color: transparent;
+	padding: 1.2em;
+	border-radius: 10%;
+	font-family: monospace;
+}
+.return:active
+{
+	color: rgb(120,0,0);
+}
+@media screen and (max-width: 600px)
+{
+	.dashboard{
+		font-size: 1.2em;
+	}
+	.ta{
+		font-size: 1.2em;
+	}
+	.body{
+		font-size: 0.8em;
+	}
+}
+@media screen and (max-width: 400px)
+{
+  .body{
+		font-size: 0.55em;
+	}
+  .body-two,.body-three{
+    font-size:0.7em;
+  }
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+    </style>
+</head>
+<nav>
+    <ul>
+    <li><a href="/index">Exit</a></li>
+    <li><a href="/addmovie">Home</a></li>
+      </ul>
+    </nav>
+
+<body>
+	
+<h1 class="ta">total theaters - <span class="ta-count">{{l[0]}}</span></h1>
+<h1 class="ov">overview</h1>
+
+<div class="body">
+
+	<div class="twitter child">
+		<span class="twit"><i class="ti ti-brand-twitter"></i>&nbsp;TotalCities</span>
+		<span class="socail-count">{{l[4]}}</span>
+		
+	</div>
+
+  
+	<div class="twitter child">
+		<span class="twit"><i class="ti ti-brand-twitter"></i>&nbsp;TotalShows</span>
+		<span class="socail-count">{{l[1]}}</span>
+		
+	</div>
+
+    <div class="twitter child">
+		<span class="twit"><i class="ti ti-brand-twitter"></i>&nbsp;TotalCustomers</span>
+		<span class="socail-count">{{l[3]}}</span>
+		
+	</div>
+
+    <div class="twitter child">
+		<span class="twit"><i class="ti ti-brand-twitter"></i>&nbsp;TotalBookings</span>
+		<span class="socail-count">{{l[5]}}</span>
+	</div>
+
+    <div class="twitter child">
+		<span class="twit"><i class="ti ti-brand-twitter"></i>&nbsp;TotalMoney</span>
+		<span class="socail-count">{{l[2]}}</span>
+	</div>
+
+</div>
+
+
+<h1 class="ov">today's overview</h1>
+
+<div class="body-two">
+	<div class="today">
+		<span class="twit"><i class="ti ti-brand-twitter"></i></span>
+		<span class="followers">TodayShowsCount</span>
+		<span class="stats">{{l[6]}}<span class="stats2"></span></span>
+	</div>
+
+
+</div>
+
+
+
+</body>
+</html>

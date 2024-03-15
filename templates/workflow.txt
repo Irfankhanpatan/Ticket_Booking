@@ -1,0 +1,50 @@
+admin:
+addcity
+addowner
+addtheater(city,ownwer)
+addmovie
+
+(cancel show--->search by theater,view shows,delete theater,view all theaters )
+
+customer:
+signup
+login
+search movie by city--->search theater--->select seat---book
+
+theaterowner:
+addshow:
+
+
+if the owner is managing two theaters then while login from alogin we need to pass to a page where owner can select theater to login
+(addmovie,cancel shows)
+
+
+
+Explanation:
+
+login as admin
+Create a city
+create a owner
+create a movie
+create a theater
+
+login as theaterowner
+addshow
+
+signup as normal user
+login 
+select city and movie
+select theater and date&time
+select seats 
+book 
+
+
+
+
+Adilabad  504001
+
+Agra 282001
+
+Ahmedabad 414001
+
+Banswara  327001
